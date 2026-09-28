@@ -42,8 +42,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0">
-                    <a href="#" class="text-3xl font-black tracking-tighter">CALU<span class="text-calu-accent">.</span></a>
-                </div>
+    <!-- Cambiamos gap-3 por gap-1 para acercar el logo al texto -->
+    <a href="#" class="flex items-center gap-1 group">
+        <span class="text-3xl font-black tracking-tighter">CALU<span class="text-calu-accent">.</span></span>
+        
+        <!-- Cambiamos h-10 por h-8 para achicar el ícono e igualarlo a la fuente -->
+        <img src="logo.png" alt="Logo CALU" class="h-8 w-auto invert mix-blend-screen transition-transform duration-300 group-hover:scale-105">
+    </a>
+</div>
                 <div class="hidden md:flex space-x-8">
                     <a href="#enfoque" class="text-gray-300 hover:text-white transition">Nuestro Enfoque</a>
                     <a href="#casos" class="text-gray-300 hover:text-white transition">Casos CALU</a>
@@ -71,13 +77,13 @@
                 <span class="gradient-text">CALU hace que se vea.</span>
             </h1>
             <p class="mt-4 text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-10 font-light">
-                No venimos a "sacarte fotitos" ni a manejarte el Instagram. Creamos el contenido audiovisual que tu negocio necesita para mostrarse y <strong class="text-white">vender</strong>.
+                Creamos el contenido audiovisual que tu negocio necesita para mostrarse y <strong class="text-white">vender</strong>.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#servicios" class="bg-calu-accent text-black font-bold text-lg py-4 px-8 rounded-full hover:scale-105 transition duration-300 shadow-[0_0_20px_rgba(192,255,0,0.5)]">
                     Ver Planes y Abonos
                 </a>
-                <a href="#casos" class="glass-card text-white font-bold text-lg py-4 px-8 rounded-full hover:bg-white hover:text-black transition duration-300">
+                <a href="#galeria" class="glass-card text-white font-bold text-lg py-4 px-8 rounded-full hover:bg-white hover:text-black transition duration-300">
                     Ver Portfolio
                 </a>
             </div>
@@ -128,7 +134,7 @@
     </section>
 
     <!-- Casos CALU (Portfolio Estructurado) -->
-    <section id="casos" class="py-24 bg-[#0f0f0f]">
+    <section id="casos" class="scroll-mt-20 py-24 bg-[#0f0f0f]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold mb-4">Casos CALU</h2>
@@ -176,6 +182,83 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+</div> <!-- Cierre del div del caso del Festival -->
+
+        <!-- NUEVA GALERÍA FOTOGRÁFICA DE PORTFOLIO -->
+        <!-- Agregamos id="galeria", los márgenes (max-w-7xl mx-auto px-4) y scroll-mt-28 para que la barra no tape el título -->
+        <!-- NUEVA GALERÍA FOTOGRÁFICA DE PORTFOLIO -->
+        <div id="galeria" class="scroll-mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-32">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold mb-4">Nuestro Ojo</h3>
+                <p class="text-gray-400 text-lg">No solo grabamos. También disparamos.</p>
+            </div>
+            
+            <!-- Grilla Bento Box -->
+            <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-none md:grid-rows-2 gap-6 h-auto md:h-[600px]">
+                
+                <!-- Foto 1 (.jpeg) -->
+                <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-3xl glass-card aspect-square md:aspect-auto cursor-pointer" onclick="abrirFoto('1.jpeg')">
+                    <img src="1.jpeg" alt="Cobertura Show en Vivo" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
+                    <!-- Ícono de expandir -->
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+                        <i class="fa-solid fa-expand text-4xl text-calu-accent drop-shadow-lg"></i>
+                    </div>
+                    
+                    <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                        <span class="text-calu-accent font-bold uppercase tracking-wider text-sm">Cobertura de Shows</span>
+                    </div>
+                </div>
+
+                <!-- Foto 2 (.jpeg) -->
+                <div class="md:col-span-2 md:row-span-1 relative group overflow-hidden rounded-3xl glass-card aspect-video md:aspect-auto cursor-pointer" onclick="abrirFoto('2.jpeg')">
+                    <img src="2.jpeg" alt="Producción Editorial" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
+                    <!-- Ícono de expandir -->
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+                        <i class="fa-solid fa-expand text-4xl text-calu-accent drop-shadow-lg"></i>
+                    </div>
+                    
+                    <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                        <span class="text-calu-accent font-bold uppercase tracking-wider text-sm">Producción Editorial</span>
+                    </div>
+                </div>
+
+                <!-- Foto 4 (.jpeg) -->
+                <div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-3xl glass-card aspect-square md:aspect-auto cursor-pointer" onclick="abrirFoto('4.jpeg')">
+                    <img src="4.jpeg" alt="Moda & Lifestyle" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
+                    <!-- Ícono de expandir -->
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+                        <i class="fa-solid fa-expand text-4xl text-calu-accent drop-shadow-lg"></i>
+                    </div>
+                    
+                    <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                        <span class="text-calu-accent font-bold uppercase tracking-wider text-sm">Moda</span>
+                    </div>
+                </div>
+
+                <!-- Foto 3 (.png) -->
+                <div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-3xl glass-card aspect-square md:aspect-auto cursor-pointer" onclick="abrirFoto('3.png')">
+                    <img src="3.png" alt="Retrato Exterior" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
+                    <!-- Ícono de expandir -->
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+                        <i class="fa-solid fa-expand text-4xl text-calu-accent drop-shadow-lg"></i>
+                    </div>
+                    
+                    <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                        <span class="text-calu-accent font-bold uppercase tracking-wider text-sm">Retrato</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -400,5 +483,107 @@
             }
         }
     </script>
+    
+    <!-- Script para evitar que el video de fondo se trabe -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const videoFondo = document.querySelector('video');
+            if (videoFondo) {
+                // Si el navegador lo pausa por ahorro de energía, lo forzamos a seguir
+                videoFondo.addEventListener('pause', function() {
+                    videoFondo.play();
+                });
+            }
+        });
+    </script>
+
+    <!-- Modal (Pantalla Completa) para Fotos -->
+    <div id="visor-fotos" class="fixed inset-0 z-[100] bg-black/95 hidden flex justify-center items-center opacity-0 transition-opacity duration-300 backdrop-blur-sm" onclick="cerrarFoto()">
+        <button class="absolute top-6 right-6 lg:top-10 lg:right-10 text-white text-5xl font-light hover:text-calu-accent transition-colors">&times;</button>
+        <img id="foto-ampliada" src="" alt="Pantalla Completa" class="max-h-[90vh] max-w-[90vw] object-contain rounded-xl shadow-[0_0_40px_rgba(192,255,0,0.1)] scale-95 transition-transform duration-300">
+    </div>
+
+    <!-- Script para abrir y cerrar fotos -->
+    <script>
+        const visor = document.getElementById('visor-fotos');
+        const fotoAmpliada = document.getElementById('foto-ampliada');
+
+        function abrirFoto(rutaImagen) {
+            fotoAmpliada.src = rutaImagen; 
+            visor.classList.remove('hidden'); 
+            setTimeout(() => {
+                visor.classList.remove('opacity-0');
+                fotoAmpliada.classList.remove('scale-95');
+                fotoAmpliada.classList.add('scale-100');
+            }, 10);
+        }
+
+        function cerrarFoto() {
+            visor.classList.add('opacity-0');
+            fotoAmpliada.classList.remove('scale-100');
+            fotoAmpliada.classList.add('scale-95');
+            setTimeout(() => {
+                visor.classList.add('hidden'); 
+                fotoAmpliada.src = ""; 
+            }, 300);
+        }
+    </script>
+
+    <!-- Script para evitar que el video de fondo se trabe -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const videoFondo = document.querySelector('video');
+            if (videoFondo) {
+                videoFondo.addEventListener('pause', function() {
+                    videoFondo.play();
+                });
+            }
+        });
+    </script>
+
+<!-- Modal (Pantalla Completa) para Fotos -->
+    <div id="visor-fotos" class="fixed inset-0 z-[100] bg-black/95 hidden flex justify-center items-center opacity-0 transition-opacity duration-300 backdrop-blur-sm" onclick="cerrarFoto()">
+        <button class="absolute top-6 right-6 lg:top-10 lg:right-10 text-white text-5xl font-light hover:text-calu-accent transition-colors">&times;</button>
+        <img id="foto-ampliada" src="" alt="Pantalla Completa" class="max-h-[90vh] max-w-[90vw] object-contain rounded-xl shadow-[0_0_40px_rgba(192,255,0,0.1)] scale-95 transition-transform duration-300">
+    </div>
+
+    <!-- Script para abrir y cerrar fotos -->
+    <script>
+        const visor = document.getElementById('visor-fotos');
+        const fotoAmpliada = document.getElementById('foto-ampliada');
+
+        function abrirFoto(rutaImagen) {
+            fotoAmpliada.src = rutaImagen; 
+            visor.classList.remove('hidden'); 
+            setTimeout(() => {
+                visor.classList.remove('opacity-0');
+                fotoAmpliada.classList.remove('scale-95');
+                fotoAmpliada.classList.add('scale-100');
+            }, 10);
+        }
+
+        function cerrarFoto() {
+            visor.classList.add('opacity-0');
+            fotoAmpliada.classList.remove('scale-100');
+            fotoAmpliada.classList.add('scale-95');
+            setTimeout(() => {
+                visor.classList.add('hidden'); 
+                fotoAmpliada.src = ""; 
+            }, 300);
+        }
+    </script>
+
+    <!-- Script para evitar que el video de fondo se trabe -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const videoFondo = document.querySelector('video');
+            if (videoFondo) {
+                videoFondo.addEventListener('pause', function() {
+                    videoFondo.play();
+                });
+            }
+        });
+    </script>
+
 </body>
 </html>
